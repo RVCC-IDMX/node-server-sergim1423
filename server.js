@@ -1,11 +1,9 @@
-const { appendFile } = require('fs');
+const { rename } = require('fs');
 
-const newContent = '\nThis is some new text';
-
-appendFile('hi.txt', newContent, (err) => {
+rename('hi,txt', 'hello.txt', (err) => {
   if (err) {
     console.error(err);
     return;
   }
-  console.log('Content Written!');
+  console.log('File renamed!');
 });
