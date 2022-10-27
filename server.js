@@ -1,9 +1,11 @@
-const { readFile, readFileSync } = require('fs');
+const { appendFile } = require('fs');
 
-try {
-  const data = readFileSync('hi.text', 'utf8');
-  console.log(data);
-} catch (err) {
-  console.error(err);
-}
-console.log('Log from outside');
+const newContent = '\nThis is some new text';
+
+appendFile('hi.txt', newContent, (err) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  console.log('Content Written!');
+});
