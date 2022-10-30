@@ -20,6 +20,7 @@ const server = http.createServer((req, res) => {
       res.statusCode = 404;
       break;
   }
+
   fs.readFile(path, (err, data) => {
     if (err) {
       console.error(err);
