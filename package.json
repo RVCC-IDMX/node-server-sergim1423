@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node server",
+    "dev": "nodemon server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,6 +23,7 @@
     "@eslint/create-config": "^0.4.0",
     "eslint": "^8.26.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.26.0"
+    "eslint-plugin-import": "^2.26.0",
+    "nodemon": "^2.0.20"
   }
 }
